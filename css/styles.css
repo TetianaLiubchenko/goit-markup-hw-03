@@ -28,7 +28,6 @@ body {
   padding-right: 15px;
   /*вирівнює по центру*/
   margin: 0 auto;
-  outline: 2px solid rgb(21, 227, 21);
 }
 
 img {
@@ -40,11 +39,11 @@ img {
 /* header */
 .header {
   background: var(--bacground-header);
+  border: 1px solid #ececec;
 }
 .header-list .item:not(:last-child) {
   margin-right: 50px;
   display: block;
-  background-color: tomato;
 }
 .contacts {
   padding-top: 32px;
@@ -54,7 +53,6 @@ img {
 }
 .contacts .item + .item {
   margin-left: 50px;
-  background-color: tomato;
 }
 .header-nav {
   display: flex;
@@ -207,15 +205,15 @@ img {
   letter-spacing: 0.03em;
   color: var(---text-color);
 }
-.container-services {
+.list-services {
   display: flex;
+  padding-top: 94px;
   padding-bottom: 94px;
-  width: 1200px;
-  justify-content: space-around;
   flex-wrap: wrap;
+  flex-basis: calc((100% - 2 * 30px) / 3);
+  gap: 30px;
 }
 .container-services-item {
-  justify-content: center;
   display: flex;
 }
 
@@ -225,7 +223,6 @@ img {
 }
 .list-team {
   display: flex;
-
   gap: 30px;
   text-align: center;
 }
@@ -284,29 +281,32 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  width: calc((100% - 90px) / 4);
-
-  .list {
-    list-style: none;
-  }
-  .link {
-    text-decoration: none;
-  }
-  ul {
-    margin: 0;
-    padding-left: 0;
-  }
-  p,
-  h1,
-  h2,
-  h3,
-  h4 {
-    margin: 0;
-  }
+  flex-basis: calc((100% - 90px) / 4);
 }
+
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
 /* footer*/
 .footer {
   background: var(--background-color-main);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-link {
   font-family: "Raleway", sans-serif;
@@ -332,6 +332,16 @@ img {
 }
 .address {
   font-style: normal;
+  /*--якщо прибрати стайл нормал текс стає курсивом*/
+  margin-top: 20px;
+}
+
+.contacts-mail-footer {
+  margin-top: 9px;
+}
+
+.contacts-tel-footer {
+  margin-top: 9px;
 }
 
 .contacts-mail-footer:hover,
@@ -348,22 +358,61 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(---color-logo-footer);
+  margin-top: 20px;
 }
 .container-footer {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  outline: 7px solid green;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-left: 215px;
   text-align: start;
 }
 
 /*portfolio*/
 .main-portfolio {
   background: var (---color-portfolio-bgd);
+  padding-top: 94 px;
+  padding-bottom: 94px;
+  padding-left: 215px;
+  padding-right: 215px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
+
+.main-portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.button-nav-portfolio {
+  min-width: 73px;
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.gallery-list {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.gallery-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  flex-direction: column;
+  flex-basis: calc((100% - 60px) / 3);
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+}
+
 .button-nav-portfolio {
   background: var(---color-portfolio-btn);
   border-radius: 4px;
@@ -376,6 +425,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(---color--portfolio-text-btn);
+  min-width: 73px;
 }
 
 .button-nav-portfolio:hover,
@@ -399,6 +449,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(---text-color);
+  margin-bottom: 4px;
 }
 .descripchion {
   font-weight: 400;
