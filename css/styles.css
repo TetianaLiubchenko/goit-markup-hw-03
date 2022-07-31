@@ -40,6 +40,7 @@ img {
 .header {
   background: var(--bacground-header);
   border: 1px solid #ececec;
+  outline: 3px solid red;
 }
 .header-list .item:not(:last-child) {
   margin-right: 50px;
@@ -309,8 +310,10 @@ h4 {
 }
 
 /* footer*/
-.footer {
+footer {
   background: var(--background-color-main);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-link {
   font-family: "Raleway", sans-serif;
@@ -336,7 +339,7 @@ h4 {
 }
 .address {
   font-style: normal;
-  /*--якщо прибрати стайл нормал текс стає курсивом*/
+  /*--якщо прибрати стайл нормал текст стає курсивом*/
   margin-top: 20px;
 }
 
@@ -411,10 +414,6 @@ h4 {
   border: 1px solid #eeeeee;
 }
 .current {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   color: var(---color-current);
 }
 .button-nav-portfolio-all,
@@ -430,11 +429,12 @@ h4 {
   letter-spacing: 0.03em;
   color: var(---color--portfolio-text-btn);
   min-width: 107px;
+
+  border: transparent;
 }
 
 .button-nav-portfolio:hover,
-.button-nav-portfolio:focus,
-.button-nav-portfolio-all {
+.button-nav-portfolio:focus {
   background: var(--color-bgd-btn);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
