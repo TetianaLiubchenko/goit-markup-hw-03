@@ -40,7 +40,6 @@ img {
 .header {
   background: var(--bacground-header);
   border: 1px solid #ececec;
-  outline: 3px solid red;
 }
 .header-list .item:not(:last-child) {
   margin-right: 50px;
@@ -141,11 +140,11 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--color-btn-text);
-
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  min-width: 152px;
+  border: 0;
+  padding: 10px 32px;
 }
 
 .main-title {
@@ -155,6 +154,7 @@ img {
   letter-spacing: 0.03em;
   color: var(---text-color);
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .main-content {
   font-weight: 400;
@@ -185,14 +185,11 @@ img {
 
 .list-skills {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .skills-item {
-  justify-content: center;
   width: calc((100% - 30px * 3) / 4);
-
   flex-wrap: wrap;
 }
 .flex-element:nth-child(4n) {
@@ -269,6 +266,10 @@ img {
   background: #ffffff;
   margin-bottom: 10px;
 }
+.team-list {
+  color: #757575;
+}
+
 .team-cart {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -330,25 +331,28 @@ footer {
 .logo-footer {
   color: var(---color-logo-footer);
 }
+.logo-link-footer {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--color-logo);
+  margin-bottom: 20px;
+}
+
 .contacts-mail-footer,
 .contacts-tel-footer {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  margin-top: 9px;
 }
 .address {
   font-style: normal;
   /*--якщо прибрати стайл нормал текст стає курсивом*/
-  margin-top: 20px;
-}
-
-.contacts-mail-footer {
-  margin-top: 9px;
-}
-
-.contacts-tel-footer {
-  margin-top: 9px;
 }
 
 .contacts-mail-footer:hover,
@@ -365,7 +369,6 @@ footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(---color-logo-footer);
-  margin-top: 20px;
 }
 .container-footer {
   width: 1200px;
@@ -377,7 +380,7 @@ footer {
 
 /*portfolio*/
 .main-portfolio {
-  background: var(---color-portfolio-bgd);
+  background: var(---color-cart-portfolio);
   padding-top: 94px;
   padding-bottom: 94px;
   display: flex;
@@ -409,7 +412,6 @@ footer {
   padding: 20px 24px;
 
   flex-direction: column;
-  flex-basis: calc((100% - 2 * 30px) / 3);
   background: #ffffff;
   border: 1px solid #eeeeee;
 }
@@ -429,8 +431,7 @@ footer {
   letter-spacing: 0.03em;
   color: var(---color--portfolio-text-btn);
   min-width: 107px;
-
-  border: transparent;
+  border: 1px solid transparent;
 }
 
 .button-nav-portfolio:hover,
