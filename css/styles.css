@@ -41,6 +41,9 @@ img {
   background: var(--bacground-header);
   border: 1px solid #ececec;
 }
+.header-nav {
+  display: flex;
+}
 .header-list .item:not(:last-child) {
   margin-right: 50px;
   display: block;
@@ -233,19 +236,10 @@ img {
   text-align: center;
 }
 
-.team-title {
-  text-align: center;
-  margin-bottom: 50px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .container-team {
   width: 1200px;
-  display: flex;
   margin-left: auto;
   margin-right: auto;
-  flex-wrap: wrap;
 }
 
 .team-title {
@@ -255,6 +249,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(---text-color);
+  margin-bottom: 50px;
 }
 .team {
   font-weight: 500;
@@ -341,6 +336,10 @@ footer {
   color: var(--color-logo);
   margin-bottom: 20px;
 }
+.contacts-link-footer,
+.contacts-mail-footer {
+  margin-bottom: 9px;
+}
 
 .contacts-mail-footer,
 .contacts-tel-footer {
@@ -348,7 +347,6 @@ footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  margin-top: 9px;
 }
 .address {
   font-style: normal;
@@ -407,11 +405,7 @@ footer {
   flex-basis: calc((100% - 60px) / 3);
 }
 .gallery-cards {
-  display: flex;
-  flex-wrap: wrap;
   padding: 20px 24px;
-
-  flex-direction: column;
   background: #ffffff;
   border: 1px solid #eeeeee;
 }
